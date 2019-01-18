@@ -28,7 +28,7 @@ moment.locale('fr');
 @NgModule({
   declarations: [
     AppComponent,
-    ModalPage
+    ModalPage,
 
     AppComponent,
     ContactFormComponent

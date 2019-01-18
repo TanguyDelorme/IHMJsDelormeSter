@@ -15,7 +15,7 @@ export class Page1Page implements OnInit {
 
   public boolCheck:boolean=true;
   public articles: Array<any>;
-
+  public identifiant:string = "";
   public toShow: boolean;
 
   constructor(public page1Service: Page1Service, public router: Router) {
@@ -24,32 +24,20 @@ export class Page1Page implements OnInit {
 
 
   ngOnInit() {
-    console.log(localStorage.getItem("identifiant"));
-    if(localStorage.getItem("identifiant") == ''){
-      console.log("Tu n'es pas connecté");
-      this.router.navigateByUrl("main");
-    }
-    else{
-      console.log("Tu es connecté");
-    }
+
     this.page1Service.getArticles().subscribe(
       (data: Array<any>) => {
         this.articles = data;
 
-        //this.page1Service.persistArticles(data).then(
-          //ok => {
-            //console.log("Les articles ont bien été stockés");
-          //}
-        //);
+        this.page1Service.persistArticles(data).then(
+          ok => {
+            console.log("Les articles ont bien été stockés");
+          }
+        );
       }
     );
-    //this.page1Service.storage.get('articles').then((val) => {
-
-
-
-    //});
-
-
+    this.page1Service.storage.get('articles').then((val) => {
+    });
   }
 
   goToMainPage(){

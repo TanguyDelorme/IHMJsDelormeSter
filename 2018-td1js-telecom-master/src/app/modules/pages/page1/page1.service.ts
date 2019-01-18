@@ -18,4 +18,12 @@ export class Page1Service {
   persistArticles(articles){
     return this.storage.set("articles", articles);
   }
+
+  getIdentifiant(){
+    return this.storage.get("identifiant");
+  }
+
+  persistIdentifiant(identifiant){
+    return this.storage.set("identifiant", identifiant);
+  }
 }

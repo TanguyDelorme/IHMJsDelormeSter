@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 const defaultsRoutes: Routes = [
-  { path: '', redirectTo: 'page1', pathMatch: 'full' },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
   {
     path: 'main',
     loadChildren: '../modules/main/main.page.module#MainPageModule'
