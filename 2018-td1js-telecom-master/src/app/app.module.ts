@@ -13,13 +13,15 @@ import {RouteReuseStrategy} from "@angular/router";
 import localeFr from '@angular/common/locales/fr';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 registerLocaleData(localeFr);
 moment.locale('fr');
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactFormComponent
   ],
   imports: [
     FormsModule,
@@ -30,7 +32,7 @@ moment.locale('fr');
     BrowserAnimationsModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    IonicStorageModule.forRoot({
+    IonicStorageModule.forRoot({//stockage navigateur indexé db
       name: 'ionic-storage',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),

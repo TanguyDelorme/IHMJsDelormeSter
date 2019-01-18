@@ -12,15 +12,21 @@ export class MainPage implements OnInit {
 
   public identifiant: string;
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) {
+  }
 
   ngOnInit() {
-    console.log("INIT MAIN PAGE");
     this.identifiant = localStorage.getItem("identifiant");
   }
 
   goToPage1(){
     this.router.navigateByUrl("page1");
   }
+
+  validateName(name: string){
+    localStorage.setItem("identifiant",name);
+    this.goToPage1();
+  }
+
 }
 

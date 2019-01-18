@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    localStorage.setItem("identifiant", "Mickael");
+    localStorage.setItem("identifiant", "");
 
   }
 }

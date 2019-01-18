@@ -12,7 +12,7 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
-
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
 // Global path variables
 $font-path: "/assets/fonts";
@@ -64,3 +64,4 @@ $lato-font-family: "Lato";
 
 //@import "roboto";
 //@import "noto-sans";
+

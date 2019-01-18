@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Storage} from "@ionic/storage";
+import {Router} from "@angular/router";
 
 @Injectable()
 export class Page1Service {
@@ -17,5 +18,4 @@ export class Page1Service {
   persistArticles(articles){
     return this.storage.set("articles", articles);
   }
-
 }
