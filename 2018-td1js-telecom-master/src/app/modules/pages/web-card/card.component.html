@@ -1,0 +1,27 @@
+<ion-card >
+  <ion-card-header>
+    <ion-card-title>{{article.title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{article.body}}</p>
+
+
+  </ion-card-content>
+  <ion-item>
+
+    <ion-buttons color="primary" (click)="openModal(article)" slot="start">
+      <ion-button fill="solid" color="secondary">
+        View more
+        <ion-icon name="add" slot="end"></ion-icon>
+      </ion-button>
+
+
+
+
+    </ion-buttons>
+
+    <ion-label flex-wrap >Add to cache</ion-label>
+    <ion-toggle check [(ngModel)]="boolCheck" slot="end" color="dark"></ion-toggle>
+
+  </ion-item>
+</ion-card>

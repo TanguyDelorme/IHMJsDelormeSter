@@ -1,6 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {Page1Service} from "./page1.service";
 import {Router} from "@angular/router";
+import {ModalController} from "@ionic/angular";
+import {ModalPage} from "../modal/modal.component";
 
 @Component({
   selector: 'page1',
@@ -11,6 +13,7 @@ import {Router} from "@angular/router";
 })
 export class Page1Page implements OnInit {
 
+  public boolCheck:boolean=true;
   public articles: Array<any>;
 
   public toShow: boolean;
@@ -33,13 +36,20 @@ export class Page1Page implements OnInit {
       (data: Array<any>) => {
         this.articles = data;
 
-        this.page1Service.persistArticles(data).then(
-          ok => {
-            console.log("Les articles ont bien été stockés");
-          }
-        );
+        //this.page1Service.persistArticles(data).then(
+          //ok => {
+            //console.log("Les articles ont bien été stockés");
+          //}
+        //);
       }
     );
+    //this.page1Service.storage.get('articles').then((val) => {
+
+
+
+    //});
+
+
   }
 
   goToMainPage(){

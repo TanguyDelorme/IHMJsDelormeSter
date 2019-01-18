@@ -1,26 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <span>Page 1</span>
-  </ion-toolbar></ion-header>
+    <ion-title>Liste des Web Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
 <ion-content>
-  <section >
-    <h4>Bienvenue sur la page 1</h4>
-    <ion-button (click)="goToMainPage()">Main page</ion-button>
-  </section>
-
-  <h1 *ngIf="toShow">
-    Je dois m'afficher
-  </h1>
-
-  <h1 *ngIf="!toShow">
-    Je ne dois pas m'afficher
-  </h1>
 
   <div *ngFor="let article of articles">
-    <h3>{{article.title}}</h3>
-    <p>{{article.body}}</p>
-    <br />
-  </div>
 
+  <card-article [article]="article"></card-article>
+
+  </div>
 
 </ion-content>

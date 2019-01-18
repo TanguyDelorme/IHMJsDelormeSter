@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons (click)="dismiss()" slot="start">
+    <ion-button>
+    <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Fiche détaillée</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <section >
+    <ion-card >
+      <ion-card-content>
+
+
+
+
+    <ion-item>
+      <ion-label>User Id : </ion-label>{{val.userId}}
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Id : </ion-label>{{val.id}}</ion-item>
+      <ion-item>
+        <ion-label>Titre : </ion-label>{{val.title}}</ion-item>
+      <ion-item text-wrap>
+        Corps : {{val.body}}
+      </ion-item>
+
+
+    </ion-card-content>
+    </ion-card>
+  </section>
+
+
+
+
+  <ion-card (click)="openModal(article)" *ngFor="let article of articles">
+    <ion-card-header>
+      <ion-card-title>{{article.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{article.body}}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

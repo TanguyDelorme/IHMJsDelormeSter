@@ -12,8 +12,15 @@ import {environment} from "../environments/environment";
 import {RouteReuseStrategy} from "@angular/router";
 import localeFr from '@angular/common/locales/fr';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 import {HttpClientModule} from "@angular/common/http";
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import {ModalPage} from "./modules/pages/modal/modal.component";
+import {Page1PageModule} from "./modules/pages/page1/page1.page.module";
+
+
+
+
 
 registerLocaleData(localeFr);
 moment.locale('fr');
@@ -21,12 +28,20 @@ moment.locale('fr');
 @NgModule({
   declarations: [
     AppComponent,
+    ModalPage
+
+    AppComponent,
     ContactFormComponent
+  ],
+  entryComponents:[
+    ModalPage
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    Page1PageModule,
+
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
